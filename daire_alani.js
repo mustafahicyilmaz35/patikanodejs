@@ -12,5 +12,5 @@ prompt.get(['yaricap'], function(err, result){
 
     let alan = pi * Math.pow(result.yaricap, 2);
 
-    console.log("Dairenin alanı : " + alan);
+    console.log("Yarıcapı " + result.yaricap + " olan dairenin alanı: " + alan);
 });
