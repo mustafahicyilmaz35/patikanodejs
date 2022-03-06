@@ -33,6 +33,14 @@ app.get('/', async (req, res) => {
   });
 });
 
+app.get('/posts/:id', async (req, res) => {
+  //console.log(req.params.id);
+  const post = await Post.findById(req.params.id);
+  res.render('post', {
+    post
+  });
+});
+
 app.get('/index', async (req, res) => {
   const posts = await Post.find({});
   res.render('index', {
